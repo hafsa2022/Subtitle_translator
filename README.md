@@ -2,7 +2,7 @@
 
 A powerful GUI application that automatically extracts audio from videos, transcribes speech using OpenAI Whisper, translates subtitles to any language, and exports them in multiple formats. No complex setup required!
 
-<img width="1290" height="864" alt="image" src="https://github.com/user-attachments/assets/9ff6b63d-067f-4578-a9ab-144f33b33b3e" />
+![alt text](image.png)
 
 ## Features
 
