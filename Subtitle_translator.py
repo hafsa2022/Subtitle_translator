@@ -492,14 +492,14 @@ def process_video(video_path: str, output_dir: str, options: dict, log_fn):
 
 
 def burn_subtitles_into_video(video_path: str, srt_path: str, output_path: str, log_fn):
-    """Burn SRT subtitles into video using ffmpeg — Netflix style (yellow, bold, bottom)."""
+    """Burn SRT subtitles into video using ffmpeg."""
     import imageio_ffmpeg, subprocess
 
     ffmpeg_exe = imageio_ffmpeg.get_ffmpeg_exe()
     # Escape paths for ffmpeg subtitles filter (Windows backslashes → forward, colons escaped)
     srt_escaped = srt_path.replace("\\", "/").replace(":", "\\:")
 
-    # Netflix-style subtitle filter:
+    # style subtitle filter:
     # - FontName: Arial  • FontSize: 24  • Bold: yes
     # - PrimaryColour: yellow (&H0000FFFF in ASS ABGR hex)
     # - Outline: 2px black  • Shadow: 1  • MarginV: 40px from bottom
@@ -752,7 +752,7 @@ class SubtitleTranslatorApp(tk.Tk):
         self._burn_var = tk.BooleanVar(value=False)
         ttk.Checkbutton(
             burn_frame,
-            text="Generate video with subtitles burned in  (Netflix style — yellow, bold)",
+            text="Generate video with subtitles",
             variable=self._burn_var,
         ).grid(row=0, column=0, sticky="w")
         ttk.Label(
